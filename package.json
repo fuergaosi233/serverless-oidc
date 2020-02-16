@@ -9,7 +9,8 @@
   "main": "serverless.js",
   "devDependencies": {},
   "scripts": {
-    "test": "sls"
+    "test": "sls",
+    "publish": "npm publish --access publics"
   },
   "repository": {
     "type": "git",
