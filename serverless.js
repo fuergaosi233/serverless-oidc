@@ -5,6 +5,26 @@ class MyComponent extends Component {
     console.log(this.context)
     return {}
   } // The default functionality to run/provision/update your Component
+
+  async getAuthorzationURL() {
+
+  }
+
+  async getTokenByCode() {
+
+  }
+
+  async checkToken() {
+
+  }
+
+  async getUserInfoByAccessToken() {
+
+  }
+
+  async refreshToken() {
+
+  }
 }
 
 module.exports = MyComponent
