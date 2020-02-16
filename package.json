@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@serverless/core": "^1.1.2",
+    "authing-js-sdk": "^3.7.0"
+  },
+  "name": "@authing/serverless-oidc",
+  "version": "0.1.0",
+  "description": "Serverless OIDC Authentication based on Authing",
+  "main": "serverless.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "sls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Authing/serverless-oidc.git"
+  },
+  "keywords": [
+    "oidc",
+    "authing",
+    "serverless"
+  ],
+  "author": "Authing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Authing/serverless-oidc/issues"
+  },
+  "homepage": "https://github.com/Authing/serverless-oidc#readme"
+}
