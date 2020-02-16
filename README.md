@@ -22,7 +22,7 @@ const { Component } = require('@serverless/core')
 
 class oidcDemo extends Component {
     async default() {
-      const serverlessOIDC = await this.load('../')
+      const serverlessOIDC = await this.load('@authing/serverless-oidc')
       const oidcUrl = await serverlessOIDC({
         client_id: '5d3ab8f461ec9c8bbbb4fd2b',
         redirect_uri: 'http://localhost:4577/redirect',
