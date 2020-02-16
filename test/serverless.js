@@ -11,7 +11,7 @@ class myFirstComponent extends Component {
         response_type: 'code',
         state: 'xxx',
         nonce: 'xxxx',
-        prompt: 'consent', // 后文需要测试 refresh_token，此处需要 prompt 指定为 consent
+        prompt: 'consent', // 后文需要测试 refresh_token，此处需要 prompt 指定为 consent，默认为 login
       });
 
       // 1. 引导用户在浏览器中访问此 URL

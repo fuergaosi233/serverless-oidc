@@ -4,7 +4,6 @@ const qs = require('querystring')
 
 class ServerlessOIDC extends Component {
   async default(inputs) {
-    console.log(inputs)
     this.inputs = inputs
     inputs.prompt = inputs.prompt || 'login'
     return await this.getAuthorzationURL(inputs)
