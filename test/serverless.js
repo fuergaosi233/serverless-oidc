@@ -1,6 +1,6 @@
 const { Component } = require('@serverless/core')
 
-class myFirstComponent extends Component {
+class oidcDemo extends Component {
     async default() {
       const serverlessOIDC = await this.load('../')
       const oidcUrl = await serverlessOIDC({
@@ -36,10 +36,10 @@ class myFirstComponent extends Component {
       // 5. 刷新 token
       const refreshToken = await serverlessOIDC.refreshToken({
         client_secret: 'd767fe4dc4c3f48f0697f0ccbb00dd5c',
-        refresh_token: code2Token.refresh_token,
+        refresh_token: code2Token.refreash_token,
       }); 
-      console.log(refreshToken);///
+      console.log(refreshToken);
     }
 }
 
-module.exports = myFirstComponent
+module.exports = oidcDemo
