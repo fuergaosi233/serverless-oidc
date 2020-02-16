@@ -23,6 +23,12 @@ serverless-oidc:
   inputs:
     client_id: YOUR_OIDC_CLIENT_ID
     redirect_uri: YOUR_OIDC_REDIRECT_URI
+    domain: YOUR_DOMAIN # DOAMIN_NAME.authing.cn
+    scope: SCOPE_U_NEED
+    response_type: OIDC_RESPONSE_TYPE
+    prompt: login
+    state: RAMDOM_STRING_FOR_CSRF
+    nonce: RANDOM_STRING_FOR_REPALY
 ```
 
 ## Deploy
