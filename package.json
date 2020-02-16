@@ -4,7 +4,7 @@
     "axios": "^0.19.2"
   },
   "name": "@authing/serverless-oidc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Serverless OIDC Authentication based on Authing",
   "main": "serverless.js",
   "devDependencies": {},

@@ -10,9 +10,9 @@ Serverless Authing OIDC(OpenID Connect) Process.
 ```shell
 $ npm install -g serverless
 ```
-2. install serverless-oidc
+2. install serverless-core
 ```shell
-$ npm i --save @authing/serverless-oidc
+$ npm i --save @serverless/core
 ```
 
 ## serverless.js
