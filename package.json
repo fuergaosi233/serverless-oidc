@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@serverless/core": "^1.1.2",
-    "authing-js-sdk": "^3.7.0",
     "axios": "^0.19.2"
   },
   "name": "@authing/serverless-oidc",
