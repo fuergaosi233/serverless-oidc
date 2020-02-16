@@ -1,35 +1,30 @@
-# Serverless-OIDC
+# Serverless-oidc
 
-Serverless tencent fastify component.
+Serverless Authing OIDC(OpenID Connect) Process.
 
-Install
-global install serverless
-npm install -g serverless
-install fastify
-npm i --save fastify
-Configure
-create app.js file:
-const fastify = require('fastify');
+## Install
 
-const app = fastify();
-app.get('/', (request, reply) => reply.send({ hello: 'world' }));
+1. global install serverless
+```shell
+$ npm install -g serverless
+```
+2. install serverless-oidc
+```shell
+$ npm i --save @authing/serverless-oidc
+```
 
-if (require.main === module) {
-  // called directly i.e. "node app"
-  app.listen(3000, (err) => {
-    if (err) console.error(err);
-    console.log('server listening on 3000');
-  });
-} else {
-  module.exports = app;
-}
-create serverless configure file:
-# serverless.yml
+## serverless.yml
 
-fastify:
-  component: '@twn39/tencent-fastify'
+serverless-oidc:
+  component: '@authing/serverless-oidc'
   inputs:
-    region: ap-shanghai
-Deploy
-sls --debug
-Have fun !
+    client_id: YOUR_OIDC_CLIENT_ID
+    redirect_uri: YOUR_OIDC_REDIRECT_URI
+
+## Deploy
+
+```shell
+$ sls --debug
+```
+
+Have fun !  
