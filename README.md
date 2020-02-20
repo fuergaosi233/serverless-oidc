@@ -15,14 +15,14 @@ Serverless Authing OIDC(OpenID Connect) Demo.
 
 **OpenID Connect 简称 OIDC，是 OAuth 2.0 的一个扩展，主要增加了语义化的用户信息字段。**
 
-下图是一个以授权码为例子的 OIDC 授权流程
+下图是一个以授权码为例子的 OIDC 授权流程：
 <img src="./static/OIDCFlowGraphql.png" style="margin: auto;display: block;"/>
 
-更多信息可以查看 [OIDC 流程](https://docs.authing.cn/authing/advanced/oidc/understand-oidc)
+更多信息可以查看 [OIDC 流程](https://docs.authing.cn/authing/advanced/oidc/understand-oidc)。
 
 ## 应用介绍 🏠
 
-您可以通过以下几步操作快速的创造一个由 Authing 提供的使用标准 OIDC 协议运行的 serverless 应用。
+您可以通过以下几步操作快速的创建一个由 Authing 提供的使用标准 OIDC 协议运行的 serverless 应用。
 
 ## 示例链接 🔗
 
