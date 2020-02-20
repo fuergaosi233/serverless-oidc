@@ -34,7 +34,7 @@ Serverless Authing OIDC(OpenID Connect) Demo.
 
 1.  [Node.js](https://serverlesscloud.cn/doc/providers/tencent/cli-reference/quick-start#node) （8.x 或以上的版本）
 2.  Serverless Framework CLI
-3.  Authing OIDC AppID && Secert
+3.  Authing OIDC AppID && Secret
 
 ### 安装 Node.js 和 NPM
 
@@ -89,7 +89,7 @@ x.x.x
 
    <img src="./static/CleanShot2020-02-20at15.21.50.png" height='400px' style="margin: auto;display: block;">
 
-6. 在应用信息中可以看到 `AppID` 和 `Secert` 信息
+6. 在应用信息中可以看到 `AppID` 和 `Secret` 信息
 
    <img src="./static/CleanShot2020-02-20at15.25.54.png" height='400px' style="margin: auto;display: block;">
 
