@@ -68,7 +68,8 @@ $ serverless -v
 x.x.x
 ```
 
-### 注册 Authing 账户
+<details>
+<summary style="font-size:1.25em"><strong>注册 Authing 账户</strong></summary>
 
 1. 首先访问[Authing SSO](https://sign.authing.cn/login)进行注册，在注册成功后会自动跳转至 Guide 页面指引你创建一个用户池。
    <img src="./static/CleanShot2020-02-20at15.10.45.png" height='400px' style="margin: auto;display: block;">
@@ -91,7 +92,8 @@ x.x.x
 
 6. 在应用信息中可以看到 `AppID` 和 `Secret` 信息
 
-   <img src="./static/CleanShot2020-02-20at15.25.54.png" height='400px' style="margin: auto;display: block;">
+      <img src="./static/CleanShot2020-02-20at15.25.54.png" height='400px' style="margin: auto;display: block;">
+   </details>
 
 ## 构建应用 🚗
 
@@ -246,39 +248,6 @@ app.post("/userinfo", async (req, res) => {
 在最一开始，我们需要一些 `html` 代码来帮助我们构建一个简单的页面。
 
 ```html
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" href=https://fe-static.authing.cn/dist/favicon.png
-  type=image/png>
-  <title>Serverless Oidc Demo</title>
-  <style>
-    body {
-      font-family: Avenir, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 60px;
-    }
-
-    a {
-      color: #42b983;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    ul {
-      list-style-type: none;
-    }
-  </style>
-  <link
-    rel="stylesheet"
-    href="https://cdn.bootcss.com/jstree/3.3.8/themes/default/style.min.css"
-  />
-</head>
-
 <body>
   <div style="margin-bottom:22px">
     <img
@@ -405,7 +374,7 @@ function checkLogined() {
 
 使用 `serverless` 部署应用是十分简单的。
 只需要通过`sls`命令即可完成部署，并可以添加`--debug`参数查看部署过程中的信息。
-如您的账号未登陆或注册腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登陆和注册。
+如您的账号未登录或注册腾讯云，您可以直接通过微信扫描命令行中的二维码进行授权登录和注册。
 
 ```shell
 $ sls --debug
