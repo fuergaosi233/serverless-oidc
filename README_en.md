@@ -1,12 +1,39 @@
+# Serverless-oidc
+
+![serverless-authing](https://github.com/Authing/serverless-oidc/blob/master/static/serverless-oidc.png?raw=true)
+
+Serverless Authing OIDC(OpenID Connect) Process.
+
+<p align="center">
+  <a href="./README_en.md">简体中文</a> |
+  <span>English</span>
+</p>
+## Install
+
+1. global install serverless
+
+```shell
+$ npm install -g serverless
+```
+
+2. install serverless-core
+
+```shell
+$ npm i --save @serverless/core
+```
+
+## serverless.js
+
+```javascript
 const { Component } = require("@serverless/core");
 
 class oidcDemo extends Component {
   async default() {
-    const serverlessOIDC = await this.load("../");
+    const serverlessOIDC = await this.load("@authing/serverless-oidc");
     const oidcUrl = await serverlessOIDC({
-      client_id: "5e3eb1f9df538284ec6a3911",
+      client_id: "5d3ab8f461ec9c8bbbb4fd2b",
       redirect_uri: "http://localhost:4577/redirect",
-      domain: "tmptest.authing.cn",
+      domain: "rabbit.authing.cn",
       scope: "unionid email phone offline_access openid",
       response_type: "code",
       state: "xxx",
@@ -19,8 +46,8 @@ class oidcDemo extends Component {
 
     // 2. 用户登录完成后会在回调 URL 中得到 code，将 Code 作为填到下列参数中：
     const code2Token = await serverlessOIDC.getTokenByCode({
-      code: "bDyuB1MhYPThsS~tMY8zwir~BVb",
-      client_secret: "38f70e8ed63070f5ce21dc4feb806562",
+      code: "tTSXi~rc_3LtocXC0vMAYE_yVIj",
+      client_secret: "d767fe4dc4c3f48f0697f0ccbb00dd5c",
       grant_type: "authorization_code"
     });
     console.log(code2Token);
@@ -45,3 +72,12 @@ class oidcDemo extends Component {
 }
 
 module.exports = oidcDemo;
+```
+
+## Deploy
+
+```shell
+$ sls --debug
+```
+
+Have fun !

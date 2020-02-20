@@ -1,11 +1,11 @@
 serverless-oidc:
-  component: '../../'
+  component: "../../"
   inputs:
-    client_id: 5d3ab8f461ec9c8bbbb4fd2b
+    client_id: 5e3eb1f9df538284ec6a3911
     redirect_uri: http://localhost:4577/redirect
-    domain: rabbit.authing.cn # DOAMIN_NAME.authing.cn
-    scope: 'unionid email phone offline_access openid'
-    response_type: 'code'
+    domain: tmptest.authing.cn
+    scope: "unionid email phone offline_access openid"
+    response_type: "code"
     prompt: login
-    state: 'RAMDOM_STRING_FOR_CSRF'
-    nonce: 'RANDOM_STRING_FOR_REPALY'
+    state: "RAMDOM_STRING_FOR_CSRF"
+    nonce: "RANDOM_STRING_FOR_REPALY"

@@ -1,74 +1,98 @@
 # Serverless-oidc
 
-![serverless-authing](https://github.com/Authing/serverless-oidc/blob/master/static/serverless-oidc.png?raw=true)
+![serverless-authing](./static/serverless-oidc.png)
 
-Serverless Authing OIDC(OpenID Connect) Process.
+Serverless Authing OIDC(OpenID Connect) Demo.
 
-## Install
+<p align="center">
+  <span>简体中文</span> |
+  <a href="./README_en.md">English</a>
+</p>
+## 应用介绍 🏠
 
-1. global install serverless
+您可以通过以下几步操作快速的创造一个由 Authing 提供的使用标准 OIDC 协议运行的 serverless 应用。
+
+## 示例链接 🔗
+
+[Serless Oidc Demo](http://service-jaom3m0x-1257685189.sh.apigw.tencentcs.com/)
+
+## 前提条件 🧾
+
+在使用之前，请确保具备以下条件：
+
+1.  [Node.js](https://serverlesscloud.cn/doc/providers/tencent/cli-reference/quick-start#node) （8.x 或以上的版本）
+2.  Serverless Framework CLI
+3.  Authing Oidc AppID && serert
+
+### 安装 Node.js 和 NPM
+
+- 参考 [Node.js 安装指南](https://nodejs.org/zh-cn/download/) 根据您的系统环境进行安装。
+- 安装完毕后，通过 node -v 命令，查看安装好的 Node.js 版本信息：
+
+```shell
+$ node -v
+vx.x.x
+```
+
+- 通过 npm -v 命令，查看安装好的 npm 版本信息：
+
+```shell
+$ npm -v
+x.x.x
+```
+
+### 安装 Serverless Framework CLI
+
+- 在命令行中运行如下命令：
+
 ```shell
 $ npm install -g serverless
 ```
-2. install serverless-core
+
+- 安装完毕后，通过运行 serverless -v 命令，查看 Serverless Framework CLI 的版本信息。
+
 ```shell
-$ npm i --save @serverless/core
+$ serverless -v
+x.x.x
 ```
 
-## serverless.js
+### 注册 Authing 账户
 
-```javascript
-const { Component } = require('@serverless/core')
+1. 首先访问[Authing SSO](https://sign.authing.cn/login) 可进行注册一个账号
+   创建成功后即可会自动跳转至 Guide 页面指引你创建一个用户池
+   ![](./static/CleanShot2020-02-20at15.10.45.png)
+2. 在这里填写想要的用户池名
+   ![](./static/CleanShot2020-02-20at15.12.18.png)
+3. 选择二级域名 你可以选择一个你喜欢的二级域名作为你的业务域名
+   ![](./static/CleanShot2020-02-20at15.14.02.png)
+4. 填写回调地址 在这里可以选择您的业务回调地址
+   ![](./static/CleanShot2020-02-20at15.18.20.png)
+5. 选择 OIDC 应用
+   创建完成后即可进入 控制台
+   在控制台中分别点击 `第三方登录` `OIDC` 应用后可以 可以看到已经生成的 OIDC 应用名 点击应用名即可看到应用信息
+   ![](./static/CleanShot2020-02-20at15.21.50.png)
 
-class oidcDemo extends Component {
-    async default() {
-      const serverlessOIDC = await this.load('@authing/serverless-oidc')
-      const oidcUrl = await serverlessOIDC({
-        client_id: '5d3ab8f461ec9c8bbbb4fd2b',
-        redirect_uri: 'http://localhost:4577/redirect',
-        domain: 'rabbit.authing.cn',
-        scope: 'unionid email phone offline_access openid',
-        response_type: 'code',
-        state: 'xxx',
-        nonce: 'xxxx',
-        prompt: 'consent', // 后文需要测试 refresh_token，此处需要 prompt 指定为 consent，默认为 login
-      });
+在应用信息中可以看到 AppID 和 Secert 信息
+![](./static/CleanShot2020-02-20at15.25.54.png)
 
-      // 1. 引导用户在浏览器中访问此 URL
-      console.log(oidcUrl);
+## 创建应用 🚗
 
-      // 2. 用户登录完成后会在回调 URL 中得到 code，将 Code 作为填到下列参数中：
-      const code2Token = await serverlessOIDC.getTokenByCode({
-        code: 'tTSXi~rc_3LtocXC0vMAYE_yVIj',
-        client_secret: 'd767fe4dc4c3f48f0697f0ccbb00dd5c',
-        grant_type: 'authorization_code',
-      })
-      console.log(code2Token);
+clone 本仓库
 
-      // 3. 检验 token 合法性 
-      const checkToken = await serverlessOIDC.checkToken(code2Token.id_token);
-      console.log(checkToken);
-
-      // 4. 使用 token 换取用户信息
-      const userInfo = await serverlessOIDC.getUserInfoByAccessToken(code2Token.access_token);
-      console.log(userInfo);
-
-      // 5. 刷新 token
-      const refreshToken = await serverlessOIDC.refreshToken({
-        client_secret: 'd767fe4dc4c3f48f0697f0ccbb00dd5c',
-        refresh_token: code2Token.refreash_token,
-      }); 
-      console.log(refreshToken);
-    }
-}
-
-module.exports = oidcDemo
+```
+git clone
 ```
 
-## Deploy
+## 安装依赖 🕙
+
+```
+npm install
+```
+
+## Deploy 🛫️
 
 ```shell
 $ sls --debug
 ```
 
-Have fun !  
+Have fun !
