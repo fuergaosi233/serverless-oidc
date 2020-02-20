@@ -1,0 +1,6 @@
+# serverless.yml
+
+express:
+  component: "@serverless/tencent-express"
+  inputs:
+    region: ap-shanghai
