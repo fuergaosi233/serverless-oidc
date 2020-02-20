@@ -1,6 +1,6 @@
 # Serverless-OIDC
 
-![serverless-authing](./static/serverless-oidc.png)
+<img src="./static/serverless-oidc.png" style="margin: auto;display: block;"/>
 
 Serverless Authing OIDC(OpenID Connect) Demo.
 
@@ -16,7 +16,8 @@ Serverless Authing OIDC(OpenID Connect) Demo.
 **OpenID Connect 简称 OIDC，是 OAuth 2.0 的一个扩展，主要增加了语义化的用户信息字段。**
 
 下图是一个以授权码为例子的 OIDC 授权流程
-![OIDC](./static/OIDCFlowGraphql.png)
+<img src="./static/OIDCFlowGraphql.png" style="margin: auto;display: block;"/>
+
 更多信息可以查看 [OIDC 流程](https://docs.authing.cn/authing/advanced/oidc/understand-oidc)
 
 ## 应用介绍 🏠
@@ -70,26 +71,27 @@ x.x.x
 ### 注册 Authing 账户
 
 1. 首先访问[Authing SSO](https://sign.authing.cn/login)进行注册，在注册成功后会自动跳转至 Guide 页面指引你创建一个用户池。
-   <img src="./static/CleanShot2020-02-20at15.10.45.png" height='400px'>
+   <img src="./static/CleanShot2020-02-20at15.10.45.png" height='400px' style="margin: auto;display: block;">
 2. 在这里填写想要的用户池名。
-   <img src="./static/CleanShot2020-02-20at15.12.18.png" height='400px'>
+
+   <img src="./static/CleanShot2020-02-20at15.12.18.png" height='400px' style="margin: auto;display: block;">
+
 3. 选择二级域名 你可以选择一个你喜欢的二级域名作为你的业务域名。
 
-     <img src="./static/CleanShot2020-02-20at15.14.02.png" height='400px'>
+   <img src="./static/CleanShot2020-02-20at15.14.02.png" height='400px' style="margin: auto;display: block;">
 
 4. 填写回调地址 在这里可以选择你喜欢的业务回调地址。
-
-     <img src="./static/CleanShot2020-02-20at17.29.58.png" height='400px'>
+   <img src="./static/CleanShot2020-02-20at17.29.58.png" height='400px' style="margin: auto;display: block;">
 
 5. 选择 OIDC 应用  
    在创建完成后自动跳转至，控制台。  
    在控制台中分别点击 `第三方登录`->`OIDC应用`后，可以看到已经生成的 OIDC 应用名，点击应用名即可看到该应用信息。
 
-      <img src="./static/CleanShot2020-02-20at15.21.50.png" height='400px'>
+   <img src="./static/CleanShot2020-02-20at15.21.50.png" height='400px' style="margin: auto;display: block;">
 
 6. 在应用信息中可以看到 `AppID` 和 `Secert` 信息
 
-     <img src="./static/CleanShot2020-02-20at15.25.54.png" height='400px'>
+   <img src="./static/CleanShot2020-02-20at15.25.54.png" height='400px' style="margin: auto;display: block;">
 
 ## 创建应用 🚗
 
